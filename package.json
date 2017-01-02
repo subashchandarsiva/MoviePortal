@@ -1,0 +1,21 @@
+{
+  "name": "boiler",
+  "version": "1.0.0",
+  "description": "Boiler plate hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "subash",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "eslint": "^3.12.2",
+    "html-lint": "^2.1.15",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
