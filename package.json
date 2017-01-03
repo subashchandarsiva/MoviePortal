@@ -4,18 +4,20 @@
   "description": "Boiler plate hackathon",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --hot"
   },
   "author": "subash",
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.5.2",
     "eslint": "^3.12.2",
+    "gulp": "^3.9.1",
     "html-lint": "^2.1.15",
     "webpack": "^1.14.0"
   },
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "webpack-dev-server": "^1.16.2"
   }
 }
