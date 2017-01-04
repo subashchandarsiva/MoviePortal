@@ -4,7 +4,7 @@
   "description": "Boiler plate hackathon",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot --host 0.0.0.0"
   },
   "author": "subash",
   "license": "ISC",
@@ -12,8 +12,10 @@
     "babel": "^6.5.2",
     "eslint": "^3.12.2",
     "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
     "html-lint": "^2.1.15",
     "material-ui": "^0.16.6",
+    "react-router": "^3.0.0",
     "react-tap-event-plugin": "^2.0.1",
     "webpack": "^1.14.0"
   },

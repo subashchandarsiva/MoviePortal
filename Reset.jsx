@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
 var movieInfo;
-var temp=2;
+var temp=1;
 class Reset extends React.Component {
 
 	constructor(props)
@@ -17,7 +17,7 @@ class Reset extends React.Component {
 	    this.handleChange = this.handleChange.bind(this);
 	    this.handleNext = this.handleNext.bind(this);
 	    this.handlePrev = this.handlePrev.bind(this);
-		this.state = {textValue:'',array:[],activePage: 15,page:1};
+		this.state = {textValue:'',array:[],page:1};
 	}
 
 	handleNext() 
@@ -50,7 +50,7 @@ class Reset extends React.Component {
 					console.log(item);
 					temp.push(<Card>
 						<CardHeader title={item.Title}/>
-						<CardMedia style={{width:"400px",marginLeft:"35%"}}>
+						<CardMedia  style={{width:"400px",marginLeft:"35%"}}>
       							<img src={item.Poster} style={{height:"500px"}} />
     					</CardMedia>
 						<CardText>
@@ -77,8 +77,7 @@ class Reset extends React.Component {
         	<TextField hintText="Search" id="movie" onChange={this.handleChange} style={{width:"70%"}}/>
         	<RaisedButton label="Search" secondary={true}  onClick={this.handleClick} style={{marginLeft:"1%"}}/>
         	<RaisedButton label="Next" secondary={true}  onClick={this.handleNext} style={{marginLeft:"1%"}}/>
-        	{this.state.array}
-        	
+        	{this.state.array}        	
          </div>
       );
    }
