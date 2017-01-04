@@ -1,6 +1,5 @@
 import React from 'react';
 import Request from 'superagent';
-import Design from './posterDesign.jsx';
 import ReactDOM from 'react-dom';
 import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
