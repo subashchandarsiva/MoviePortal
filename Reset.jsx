@@ -5,6 +5,7 @@ import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import { Router, Route, Link } from 'react-router';
 
 var movieInfo;
 var temp=2;
@@ -20,7 +21,7 @@ class Reset extends React.Component {
 		this.state = {textValue:'',array:[],activePage: 15,page:1};
 	}
 
-	handleNext() 
+	handleNext()
 	{
     	 temp++;
     	 this.setState({page:temp});
@@ -44,12 +45,11 @@ class Reset extends React.Component {
 		Request.get("http://www.omdbapi.com/?s="+this.state.textValue+'&page=' +this.state.page).set('Accept', 'application/json')
 		.end((err, res) => {
 			if (res.status===200) {
-				var searched = res.body.Search;				
+				var searched = res.body.Search;
 				searched.forEach(function(item)
 				{
-					console.log(item);
 					temp.push(<Card>
-						<CardHeader title={item.Title}/>
+					<CardHeader title={item.Title} />
 						<CardMedia style={{width:"400px",marginLeft:"35%"}}>
       							<img src={item.Poster} style={{height:"500px"}} />
     					</CardMedia>
@@ -57,9 +57,10 @@ class Reset extends React.Component {
       						Type : {item.Type}<br/><br/>
       						Release Year :{item.Year}
     					</CardText>
+							<Link to={"about/"+item.imdbID}><strong>More Details</strong></Link>
 							</Card>);
 				})
-				
+
     		}
      else{
      	console.log("Not ok");
@@ -78,7 +79,6 @@ class Reset extends React.Component {
         	<RaisedButton label="Search" secondary={true}  onClick={this.handleClick} style={{marginLeft:"1%"}}/>
         	<RaisedButton label="Next" secondary={true}  onClick={this.handleNext} style={{marginLeft:"1%"}}/>
         	{this.state.array}
-        	
          </div>
       );
    }
