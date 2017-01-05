@@ -78,6 +78,8 @@ class Reset extends React.Component {
         	<TextField hintText="Search" id="movie" onChange={this.handleChange} style={{width:"70%"}}/>
         	<RaisedButton label="Search" secondary={true}  onClick={this.handleClick} style={{marginLeft:"1%"}}/>
         	<RaisedButton label="Next" secondary={true}  onClick={this.handleNext} style={{marginLeft:"1%"}}/>
+
+
         	{this.state.array}
          </div>
       );
